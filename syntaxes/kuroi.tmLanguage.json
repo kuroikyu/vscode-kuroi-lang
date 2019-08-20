@@ -1,0 +1,89 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Kuroi",
+  "patterns": [
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#strings"
+    },
+    {
+      "include": "#timestamp"
+    },
+    {
+      "include": "#todo"
+    },
+    {
+      "include": "#done"
+    },
+    {
+      "include": "#mentions"
+    },
+    {
+      "include": "#tags"
+    }
+  ],
+  "repository": {
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.kuroi",
+          "match": "\\b(if|while|for|return)\\b"
+        }
+      ]
+    },
+    "timestamp": {
+      "patterns": [
+        {
+          "name": "constant.language.kuroi",
+          "match": "\\[\\d{4}-\\d{2}-\\d{2}(?: \\w{3})?(?: \\d{2}:\\d{2})?\\]"
+        }
+      ]
+    },
+    "todo": {
+      "patterns": [
+        {
+          "name": "constant.character.escape.kuroi",
+          "match": "\\bTODO\\b"
+        }
+      ]
+    },
+    "done": {
+      "patterns": [
+        {
+          "name": "variable.kuroi",
+          "match": "\\bDONE\\b"
+        }
+      ]
+    },
+    "mentions": {
+      "patterns": [
+        {
+          "name": "constant.numeric.kuroi",
+          "match": "\\B@\\w+\\b"
+        }
+      ]
+    },
+    "tags": {
+      "patterns": [
+        {
+          "name": "variable.language.kuroi",
+          "match": "\\B#\\w+\\b"
+        }
+      ]
+    },
+    "strings": {
+      "name": "string.quoted.double.kuroi",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape.kuroi",
+          "match": "\\\\."
+        }
+      ]
+    }
+  },
+  "scopeName": "main.kuroi"
+}

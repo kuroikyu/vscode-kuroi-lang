@@ -1,0 +1,25 @@
+{
+    "name": "vscode-kuroi-lang",
+    "displayName": "vscode-kuroi-lang",
+    "description": "Syntax highlighting for .kuroi files",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.37.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "kuroi",
+            "aliases": ["Kuroi", "kuroi"],
+            "extensions": [".kuroi"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "kuroi",
+            "scopeName": "main.kuroi",
+            "path": "./syntaxes/kuroi.tmLanguage.json"
+        }]
+    }
+}
