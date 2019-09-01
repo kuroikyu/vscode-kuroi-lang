@@ -29,7 +29,7 @@
       "patterns": [
         {
           "name": "keyword.control.kuroi",
-          "match": "\\b(if|while|for|return)\\b"
+          "match": "\\b(Kuroi|kuroi)\\b"
         }
       ]
     },
